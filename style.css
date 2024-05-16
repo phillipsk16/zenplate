@@ -1,32 +1,696 @@
 /* your styles will go here!! */
 
-body{
-    background-color: #F7F2EF;
-}
-
-h1{
-    color: #FF4613;
-    text-align: center;
-    font-family: "Luckiest Guy"; 
+:root {
+    --header-height: 60px;
+    --menu-bg: white;
+    --menu-highlight-hover: rgba(255, 255, 255, 0);
+  }
+  
+  .hide {
+    display: none !important;
+  }
+  
+  
+  body {
+    background-color: #f7f2ef;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body, .hero {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  * {
+    box-sizing: content-box;
+    /*overflow: hidden;*/
+  }
+  
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    right: 0;
+    height: var(--header-height);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: var(--menu-bg);
+    padding-right: 0;
+    background-color: #f7f2ef;
+  }
+  
+  
+  .logo { 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #ff4613;
     font-size: 50px;
-    font-weight: 400;
-}
-
-h2{
-    color: #F7F2EF;
-    text-align: center;
+    font-family: Luckiest Guy;
+  }
+  
+  
+  .logo:hover {
+    background: var(--menu-highlight-hover);
+    transition: background 0.3s;
+  }
+  
+  .nav-links-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    width: auto;
+    height: calc(100vh - 130px);
+    background: var(--menu-bg);
+    transition: all 0.3s;
+    z-index: 1;
+    background-color: #f7f2ef;
+  }
+  
+  .nav-links-hidden{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-100px);
+    transition: all 0.3s;
+  }
+  
+  .nav-btn{
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  
+  .btn-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    padding: 1rem;
+    border: none;
+    background: transparent;
+    z-index: 1000;
+    color: #ff4613;
     font-family: Livvic;
-    font-size: 20px;
-    font-weight: 700;
-    background-color: #FF4613;
-}
-
-h3{ color: #F7F2EF;
-    text-align: center;
+    font-weight: 600;
+  }
+  
+  btn-toggle:hover {
+    background-color: white;
+  }
+  
+  @media (min-width: 640px) {
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+  
+  .nav-links-list {
     font-family: Livvic;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    position: static;
+    height: auto;
+    gap: 1rem;
+    z-index: 100;
+    margin-right: 30px;
+    overflow: hidden;
+  }
+  
+  .nav-links-hidden {
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+    transition: all 0.3s;
+  }
+  
+  .btn-toggle {
+    display: none;
+  }
+  
+  .nav-links-list a {
+    font-size: 1.5rem;
+    color: #ff4613;
+    text-decoration: none;
+  }
+  
+  .nav-links-list a:hover {
+    color: black;
+  
+  }
+  }
+  
+  h4 {
+    font-family: Livvic;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
     font-size: 48px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    background-color: #FF4613;
-}
+    background-color: #ff4613;
+    color:#f7f2ef;
+    padding-left: 550px; 
+    padding-right: 550px;
+    padding-bottom: 200px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    background-clip: content-box;
+  }
+  
+  @media (max-width: 600px) {
+    h4 {
+      /*align-self: center;*/
+      font-size: 35px;
+    }
+  }
+  
+  
+  .hero {
+    margin-top: 100px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    background-image: url('https://images.unsplash.com/photo-1465911817134-741b5e473a1b?q=80&w=3216&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  
+  .hero__container {
+    display: flex;
+    flex-flow: row nonwrap;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+  
+  .hero__content span {
+    display: inline-block;
+    padding: 0 90px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  
+    color: white;
+  
+    box-shadow: -1px -5px 20px 0px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero__content h1 span {
+    background-color: #ff4613;
+    font-size: 75px;
+    font-family: Livvic;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1000px) {
+    .hero__content h1 span {
+      /*align-self: center;*/
+      font-size: 35px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .hero__content h1 span {
+      /*align-self: center;*/
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 50px) {
+    .hero__content h1 span {
+      /*align-self: center;*/
+      font-size: 10px;
+    }
+  }
+  
+  .recipes-list {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  
+  .recipes-list [class^="col"]
+  {
+    padding: 15px;
+    flex: 0 0 auto;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .recipes-list__title {
+    /*align-self: flex-start;*/
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: Livvic;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 65px;
+  }
+  
+  @media (max-width: 600px) {
+    .recipes-list__title {
+      /*align-self: center;*/
+      font-size: 35px;
+    }
+  }
+  
+  .recipes-list__title::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+  
+    width: 50px;
+    height: 6px;
+    margin-bottom: 10px;
+  
+    background-color: #ff4613;
+  }
+  
+  .recipes-list__title::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50px;
+    width: 0;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ff4613 transparent transparent #ff4613;
+  }
+  
+  .recipes-list__item {
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .recipes-list__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  
+  .recipes-list__info-background {
+    position: absolute;
+    bottom: 6px;
+  
+    width: 80%;
+    
+    background-color: #ff4613;
+  }
+  
+  
+  .recipes-list__info {
+    padding: 0px 25px;
+    line-height: .005;
+  }
+  
+  .recipes-list__rating i {
+    color: #fbb710;
+    font-size: 10px;
+  }
+  
+  .recipes-list__rating i:last-child {
+    color: #e0e3e4;
+  }
+  
+  .recipes-list__pagination {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 70px;
+  }
+  
+  .recipes-list__pagination > * {
+    padding: 12px 15px;
+    margin-right: 10px;
+    
+    background-color: #cccccc;
+    color: #fff;
+  
+    font-weight: bold;
+  }
+  
+  .recipes-list__pagination > span {
+    background-color: #ff4613;
+  }
+  
+  h3 {
+    font-family: Livvic;
+    font-weight: bold;
+    color: white;
+    font-size: 32px;
+  }
+  
+  .row {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+  }
+  
+  [class^="col"] {
+    padding: 0 15px;
+    width: 100%;
+  }
+  
+  .recipes-list .col-md-7,
+  .recipes-list .col-md-8,
+  .recipes-list .col-md-9,
+  .recipes-list .col-md-10,
+  .recipes-list .col-md-11,
+  .recipes-list .col-md-12,
+  .recipes-list .col-lg-1,
+  .recipes-list .col-lg-2,
+  .recipes-list .col-lg-3,
+  .recipes-list .col-lg-4,
+  .recipes-list .col-lg-5,
+  .recipes-list .col-lg-6 {
+    flex: 0 0 auto;
+    width: auto;
+  }
+  
+  /* Extra Small */
+  .col-1 {
+    width: 8.3333333333%;
+  }
+  
+  .col-2 {
+    width: 16.6666666667%;
+  }
+  
+  .col-3 {
+    width: 25%;
+  }
+  
+  .col-4 {
+    width: 33.3333333333%;
+  }
+  
+  .col-5 {
+    width: 41.6666666667%;
+  }
+  
+  .col-6 {
+    width: 50%;
+  }
+  
+  .col-7 {
+    width: 58.3333333333%;
+  }
+  
+  .col-8 {
+    width: 66.6666666667%;
+  }
+  
+  .col-9 {
+    width: 75%;
+  }
+  
+  .col-10 {
+    width: 83.3333333333%;
+  }
+  
+  .col-11 {
+    width: 91.6666666667%;
+  }
+  
+  .col-12 {
+    width: 100%;
+  }
+  
+  /* Small */
+  @media only screen and (min-width: 576px) {
+    .col-sm-1 {
+        width: 8.3333333333%;
+    }
+  
+    .col-sm-2 {
+        width: 16.6666666667%;
+    }
+  
+    .col-sm-3 {
+        width: 25%;
+    }
+  
+    .col-sm-4 {
+        width: 33.3333333333%;
+    }
+  
+    .col-sm-5 {
+        width: 41.6666666667%;
+    }
+  
+    .col-sm-6 {
+        width: 50%;
+    }
+  
+    .col-sm-7 {
+        width: 58.3333333333%;
+    }
+  
+    .col-sm-8 {
+        width: 66.6666666667%;
+    }
+  
+    .col-sm-9 {
+        width: 75%;
+    }
+  
+    .col-sm-10 {
+        width: 83.3333333333%;
+    }
+  
+    .col-sm-11 {
+        width: 91.6666666667%;
+    }
+  
+    .col-sm-12 {
+        width: 100%;
+    }
+  }
+  
+  /* Medium */
+  @media only screen and (min-width: 768px) {
+    .col-md-1 {
+        width: 8.3333333333%;
+    }
+  
+    .col-md-2 {
+        width: 16.6666666667%;
+    }
+  
+    .col-md-3 {
+        width: 25%;
+    }
+  
+    .col-md-4 {
+        width: 33.3333333333%;
+    }
+  
+    .col-md-5 {
+        width: 41.6666666667%;
+    }
+  
+    .col-md-6 {
+        width: 50%;
+    }
+  
+    .col-md-7 {
+        width: 58.3333333333%;
+    }
+  
+    .col-md-8 {
+        width: 66.6666666667%;
+    }
+  
+    .col-md-9 {
+        width: 75%;
+    }
+  
+    .col-md-10 {
+        width: 83.3333333333%;
+    }
+  
+    .col-md-11 {
+        width: 91.6666666667%;
+    }
+  
+    .col-md-12 {
+        width: 100%;
+    }
+  }
+  
+  /* Large */
+  @media only screen and (min-width: 992px) {
+    .col-lg-1 {
+        width: 8.3333333333%;
+    }
+  
+    .col-lg-2 {
+        width: 16.6666666667%;
+    }
+  
+    .col-lg-3 {
+        width: 25%;
+    }
+  
+    .col-lg-4 {
+        width: 33.3333333333%;
+    }
+  
+    .col-lg-5 {
+        width: 41.6666666667%;
+    }
+  
+    .col-lg-6 {
+        width: 50%;
+    }
+  
+    .col-lg-7 {
+        width: 58.3333333333%;
+    }
+  
+    .col-lg-8 {
+        width: 66.6666666667%;
+    }
+  
+    .col-lg-9 {
+        width: 75%;
+    }
+  
+    .col-lg-10 {
+        width: 83.3333333333%;
+    }
+  
+    .col-lg-11 {
+        width: 91.6666666667%;
+    }
+  
+    .col-lg-12 {
+        width: 100%;
+    }
+  }
+  
+  /* Extra Large */
+  @media only screen and (min-width: 1200px) {
+    .col-xl-1 {
+        width: 8.3333333333%;
+    }
+  
+    .col-xl-2 {
+        width: 16.6666666667%;
+    }
+  
+    .col-xl-3 {
+        width: 25%;
+    }
+  
+    .col-xl-4 {
+        width: 33.3333333333%;
+    }
+  
+    .col-xl-5 {
+        width: 41.6666666667%;
+    }
+  
+    .col-xl-6 {
+        width: 50%;
+    }
+  
+    .col-xl-7 {
+        width: 58.3333333333%;
+    }
+  
+    .col-xl-8 {
+        width: 66.6666666667%;
+    }
+  
+    .col-xl-9 {
+        width: 75%;
+    }
+  
+    .col-xl-10 {
+        width: 83.3333333333%;
+    }
+  
+    .col-xl-11 {
+        width: 91.6666666667%;
+    }
+  
+    .col-xl-12 {
+        width: 100%;
+    }
+  }
+  
+  .footer {
+    text-align: center; 
+  }
+  
+  footer {
+    background-color: #ff4613;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    flex: 1 0 auto;
+    flex-shrink: 0;
+  }
+  
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 45px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: Livvic;
+    font-weight: bold;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+  }
+  .footer-nav a:hover {
+    color: black;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  

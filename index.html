@@ -5,27 +5,126 @@
         <title>ZenPlate</title>
         <meta name="description" content="A food blog that aims to provide college students with healthy and easy recipes that fit into their busy schedules">
         <meta name="author" content="Kaylah Phillips">
+        <meta property="og:image" content="share-img.png">
         <link rel="icon" type="image/png" href="favicon.ico">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;700&family=Luckiest+Guy&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <header>
-            <h1>ZenPlate</h1>
-            <nav> 
-                <a href="#">
-                    <img alt="ZenPlate" src="" />
-                </a>
-                <h1>Elevating Every Bite</h1>
-                <a href="#">About</a>
-                <a href="#">Recipes</a>
-                <a href="#">Media</a>
+    
+
+    <body class="home">
+        <header class="nav-bar">
+            <a href="index.html" class="logo">ZenPlate</a>
+            
+            <nav class="nav-links">
+                <div class="nav-btn">
+                    <button class="btn-toggle">
+                        <svg aria-hidden="true" viewBox="0 0 100 60" width="30" height="30">
+                            <rect width="100" height="10" fill="#ff4613"></rect>
+                            <rect y="30" width="100" height="10" fill="#ff4613"></rect>
+                            <rect y="60" width="100" height="10" fill="#ff4613"></rect>
+                        </svg>
+                        <span class>Menu</span>
+                    </button>
+                </div>
+                <div class="nav-links-list nav-links-hidden">
+                    <a href="/recipes/">Recipes</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                </div>
             </nav>
         </header>
+
         <main>
-            <img alt="Bowl of Fruit" src="https://images.unsplash.com/photo-1444459094717-a39f1e3e0903?q=80&w=2448&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__content">
+                        <h1>
+                            <span>Elevating Every Bite</span>
+                        </h1>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recipes-list">
+                <div class="container">
+                    <div class="recipes-list__heading">
+                        <h2 class="recipes-list__title">Newest Recipes</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-easing="ease-in-out"
+                        data-aos-delay="100">
+                        <div class="recipes-list__item">
+                            <img src="https://images.unsplash.com/photo-1632552544460-055cff0d29a5?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                            <div class="recipes-list__info-background">
+                                <div class="recipes-list__info">
+                                    <h3>Smash Burger</h3>
+                                    <div class="recipes-list__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-easing="ease-in-out"
+                        data-aos-delay="200">
+                        <div class="recipes-list__item">
+                            <img src="https://images.unsplash.com/photo-1594053045614-f4ed95b84b9a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                            <div class="recipes-list__info-background">
+                                <div class="recipes-list__info">
+                                    <h3>Smoothie Bowl</h3>
+                                    <div class="recipes-list__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-easing="ease-in-out"
+                        data-aos-delay="300">
+                        <div class="recipes-list__item">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                            <div class="recipes-list__info-background">
+                                <div class="recipes-list__info">
+                                    <h3>Salmon Salad</h3>
+                                    <div class="recipes-list__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section>
+                <h4>View All Recipes</h4>
+            </section>
+        </main>
+
+
+        <!--<main>
+            <div id="background-div">
+                <div id="link-div">
+                    <a href="who_we_are.html" id="who-we-are-link"><span class="custom-font">Who We Are</span></a>
+                </div>
+            </div>
+            <img alt="food" src="https://attachments.office.net/owa/davism22%40newpaltz.edu/service.svc/s/GetAttachmentThumbnail?id=AAMkAGRkNjE3MTE2LTU3MWYtNDM1NS1iNDFjLTI4ZjU4MmM0YTkxMQBGAAAAAACHZWFd8cQZSqjApO8OpqF4BwCOWW9JuPKCQLYvvYRYC6BsAAAAAAEMAACOWW9JuPKCQLYvvYRYC6BsAABzORRwAAABEgAQAIQ9dRSMHgNGiRNqvk%2F1v%2FE%3D&thumbnailType=2&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IkU1RDJGMEY4REE5M0I2NzA5QzQzQTlFOEE2MTQzQzAzRDYyRjlBODAiLCJ0eXAiOiJKV1QiLCJ4NXQiOiI1ZEx3LU5xVHRuQ2NRNm5vcGhROEE5WXZtb0EifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsInVjIjoiYzg5ODllMGYzNmU4NDE4OGFjM2M3ODRmMmM4YjljNWUiLCJzaWduaW5fc3RhdGUiOlsiaW5rbm93bm50d2siLCJrbXNpIl0sInZlciI6IkV4Y2hhbmdlLkNhbGxiYWNrLlYxIiwiYXBwY3R4c2VuZGVyIjoiT3dhRG93bmxvYWRAZWJkNDU3MzctYjM1Mi00NzIyLWJiMGMtOWY1MzliY2JmYTY1IiwiaXNzcmluZyI6IldXIiwiYXBwY3R4Ijoie1wibXNleGNocHJvdFwiOlwib3dhXCIsXCJwdWlkXCI6XCIxMTUzODAxMTI3MjEwODU5MzcxXCIsXCJzY29wZVwiOlwiT3dhRG93bmxvYWRcIixcIm9pZFwiOlwiYmVkY2YxNTEtODMzYS00MmRjLWIyNmUtNWQzOGM1OWU3YTUxXCIsXCJwcmltYXJ5c2lkXCI6XCJTLTEtNS0yMS0xMjc0MzU4OTk5LTM4NzE5OTg2My0yNTA4NDY1MDg4LTQ2NTU3OTAyXCJ9IiwibmJmIjoxNzE1ODAwMDMwLCJleHAiOjE3MTU4MDA2MzAsImlzcyI6IjAwMDAwMDAyLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMEBlYmQ0NTczNy1iMzUyLTQ3MjItYmIwYy05ZjUzOWJjYmZhNjUiLCJhdWQiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvYXR0YWNobWVudHMub2ZmaWNlLm5ldEBlYmQ0NTczNy1iMzUyLTQ3MjItYmIwYy05ZjUzOWJjYmZhNjUiLCJoYXBwIjoib3dhIn0.a_7YEQLrQGvDJsiotCKYRYSPi2gqY_ljCclvteK1rlNVGwr906DI_sE51pEmE31nL45iRPB0ajwZ1R6IFJ2oZaTh4ZqpYDHVeNZJ4Hd-3EeQct5RASCUVtoZ04jKFKiM0pMjysmEM7zpYm_D0vf1duQ1jFw-EftnLQ57QS8uG_Hopy5390GoGX1kPai-13-FfSVepg8l9Ywoy-4wxL5xm5UtqqV1q1rZ4dVjeMj8SOKkSPDr1C4ReybmdBXJ66SjXZolP-SselX-Z14czcCDghA4iKHYEe0DH4Shjqv0MXEkxKXuZJ3Fnq7SUaFgO6tKEBgcVy8maPq9Xa77veuM1Q&X-OWA-CANARY=bdvoV-wbVm0AAAAAAAAAAFDAGT4SddwYqVK4oKbaX1Yh9aGXBT9LpGcWdcNIkonxiphZNZdjShE.&owa=outlook.office.com&scriptVer=20240503010.48&clientId=453B0E066B4B4800B58D881B2036D991&animation=true"/>
             <h2>Who We Are</h2>
             <h3>Quick and Easy</h3>
             <img alt="" src="https://images.unsplash.com/photo-1590301157284-ab2f8707bdc1?q=80&w=3135&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -35,14 +134,29 @@
             <h2>Lunch</h2>
             <img alt="" src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=2706&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
             <h2>Dinner</h2>
-            <button type="button">View All Recipes</button>
             
-        </main>
-        <footer>
-            <h2>Explore</h2>
-            <h3>About</h3>
-            <h3>Recipes</h3>
-            <h3>Media</h3>
-        </footer>
+            
+        </main> -->
+
+
     </body>
-</html>            
+
+       
+       
+
+
+
+        <footer>
+            <footer class="footer">
+            <div class="centered-content">
+                <nav class="footer-nav">
+                    <a href="/recipes/">Recipes</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                </nav>
+            </div>
+     
+        </footer>
+        <script src="./app.js"></script>
+    </body>
+</html>  
